@@ -1,0 +1,13 @@
+{
+    "name": "lenovo/websitebanhang",
+    "authors": [  {
+        "name": "Pham Nam",
+        "email": "nam23062002@gmail.com"
+    }       
+    ],
+    "description": "websitebanhang",
+    "minimum-stability": "beta",
+    "require": {
+        "mongodb/mongodb": "^1.17"
+    }
+}
