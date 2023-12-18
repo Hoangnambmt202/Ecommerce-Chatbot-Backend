@@ -1,0 +1,182 @@
+:root {
+    --black-color:#000;
+    --white-color:#fff;
+}
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 62.5%;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.m-bt-10 {
+    margin-bottom: 10px;
+}
+.form {
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #888888;
+    margin: 0 auto;
+  }
+  .form-login {
+    margin-top: 20px;
+  }
+  .heading-form {
+    font-size: 2.8rem;
+  }
+  .body-form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+  }
+  .form-group {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+  }
+  .input-form {
+    padding: 10px;
+  }
+  .group-submit {
+    justify-content: space-between;
+  }
+  .input-submit {
+    padding: 10px 15px;
+    color:  var(--white-color);
+    background-color: #00a8ff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .main-container {
+    display: flex;
+    align-items: stretch;
+  
+  }
+  .sidebar-section {
+    min-height: 600px;
+    background: linear-gradient(to bottom, #b7ef9c, #407c39, #256925);
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+  navbar li {
+  font-size: 1.8rem;
+  }
+  .menu-heading {
+    font-size: 2.4rem;
+  }
+  .content {
+    font-size: 1.8rem;
+  }
+  .content-section {
+    padding-top: 10px ;
+    padding-bottom: 10px;
+  }
+  .parameter {
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #888888;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+  }
+  
+  
+  .inner-div {
+    flex: 1;
+    margin: 0 5px;
+    padding: 5px;
+    color: #fff;
+    border-radius: 10px;
+  }
+  .inner-div-title {
+    display: flex;
+    align-items: center;
+  }
+  .inner-div b {
+    font-size: 2rem;
+  }
+  .money {
+    background-color: #3498db;
+  }
+  
+  .shipping {
+    background-color: #eb6262;
+  }
+  
+  .inbox {
+    background-color: #2ecc71;
+  }
+  
+  .progress-money {
+    background-color: #7bc2f2;
+    height: 100%;
+    width: 50%; /* Thay đổi giá trị này để thay đổi độ đầy  */
+  }
+  .progress-shipping {
+    background-color: #ee7567;
+    height: 100%;
+    width: 60%; /* Thay đổi giá trị này để thay đổi độ đầy  */
+  }
+  .progress-inbox {
+    background-color: #67ee6e;
+    height: 100%;
+    width: 60%; /* Thay đổi giá trị này để thay đổi độ đầy  */
+  }
+  
+  .progress-bar {
+    height: 20px; /* Độ cao của thanh độ đầy */
+    background-color: #f0f0f0; /* Màu nền của thanh độ đầy */
+    border-radius: 10px; /* Độ cong mép để tạo góc tròn */
+    overflow: hidden; /* Ẩn bớt nội dung vượt ra nếu có */
+  }
+  .frame {
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #888888;
+    margin-bottom: 30px;
+  }
+  
+  .chart-round {
+    padding: 30px 50px;
+    box-shadow: 2px 2px 5px #888888;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .chart-round .chart h2 {
+    font-size: 2rem;
+  }
+  .board {
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: rgb(170, 114, 222);
+  }
+  .board h2 {
+    font-size: 2rem;
+    
+  }
+  .column {
+    display: flex;
+    border-top: 1px solid #ccc;
+  }
+  
+  .column p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .remaining-goods {
+    margin-left: auto;
+  }
+  

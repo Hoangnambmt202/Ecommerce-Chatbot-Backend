@@ -1,0 +1,142 @@
+:root {
+    --primary-color: #918f8c;
+    --black-color: #000;
+    --white-color:#fff
+}
+* {
+    box-sizing: border-box;
+    font-family: sans-serif; 
+}
+body {  
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    position: relative;
+}
+.navbar-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    min-height: 50px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.logo {
+    text-decoration: none;
+}
+.logo :hover {
+    cursor: pointer;
+}
+.navbar-menu {
+    padding: 0;
+    display: flex;
+}
+.navbar-menu__item {
+    position: relative;
+}
+.navbar-items {
+    display: flex;
+    
+}
+.navbar-menu__item:hover .navbar-menu-subnav{
+    display: block;
+}
+.navbar-menu-subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var( --primary-color);
+    /* width: 100%; */
+}
+.navbar-login {
+    display: flex;
+}
+.navbar-search {
+    display: flex;
+}
+ul {
+    margin: 0;
+    padding-left: 0;
+}
+li {
+   list-style: none;
+   line-height: 50px;
+}
+li:hover{   
+    border-bottom: 1px solid var(--black-color);
+}
+
+li:hover a {
+    color: #625f5f;
+}
+a {
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+.navbar-link {
+    padding: 0 16px;
+}
+.navbar-link, i {
+    display: block;
+    text-decoration: none;
+    color: var(--black-color);
+}
+.banner {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.title {
+    text-align: center;
+}
+/* main */
+
+
+.product {
+    display: block;
+    color: var(--black-color);
+    text-decoration: none;
+}
+.product__head__img {
+    width: 100%;
+}
+.btn {
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; 
+    font-size: 1rem;
+    line-height: 1;
+    background: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    color: var(--black-color);
+}
+.btn:hover {
+    background-color: #e3cbab;
+    cursor: pointer;
+}
+footer {
+    margin-top: 20px;
+    background-color: var(--primary-color);
+}
+.footer-grid {
+    margin: 0 180px;
+}
+footer .col:last-child {
+    text-align: right;
+}
+.copyright {
+    text-align: center;
+}
