@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/responsive.css ">
     <link rel="stylesheet" type="text/css" href="./assets/grid.css">
     <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Website User</title>
 </head>
 <body>
@@ -16,5 +17,6 @@
     <?php include "./header_User.php"; ?>
     <?php include "./main_User.php";?>
     <?php include "./footer_User.php";?>
+    <script src="./js/index.js"></script>
 </body>
 </html>

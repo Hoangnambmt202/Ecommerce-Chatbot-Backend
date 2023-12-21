@@ -29,7 +29,7 @@ dataTable.addRows([
 var chart = new google.visualization.ColumnChart (document.getElementById('chart'));
 
 //define options for visualization
-var options = {width: 850, height: 400, is3D: true, title: 'Thống kê doanh số bán được trong 4 tháng'};
+var options = {width: 1000, height: 400, is3D: true, title: 'Thống kê doanh số bán được trong 4 tháng'};
 
 //draw our chart
 chart.draw(dataTable, options);

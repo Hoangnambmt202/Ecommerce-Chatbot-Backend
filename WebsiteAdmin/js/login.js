@@ -15,7 +15,7 @@ function validateForm() {
     passwordError.textContent = "Vui lòng nhập mật khẩu !";
     return false;
   }
-  
-  // Ngăn form được submit một cách truyền thống
-  return true;
+  else {
+    return true;
+  }
 }

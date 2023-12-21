@@ -1,6 +1,6 @@
 <?php
-  $servername = "127.0.0.1";
-  $database = "webbanhang";
+  $servername = "localhost";
+  $database = "webbannem2";
   $username = "root";
   $password = "";
   

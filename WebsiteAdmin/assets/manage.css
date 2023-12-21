@@ -1,4 +1,5 @@
 :root {
+    --primary-color: #918f8c;
     --black-color:#000;
     --white-color:#fff;
 }
@@ -14,21 +15,8 @@ body {
 .m-bt-10 {
     margin-bottom: 10px;
 }
-.form {
-    width: 400px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.8rem;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px #888888;
-    margin: 0 auto;
-  }
-  .form-login {
-    margin-top: 20px;
-  }
+
+
   .heading-form {
     font-size: 2.8rem;
   }
@@ -56,6 +44,31 @@ body {
     border-radius: 4px;
     cursor: pointer;
   }
+  .header {
+    border-bottom: 1px solid #EFEFEF;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px ;
+  } 
+  .header-left a {
+    font-size: 3.4rem;
+    text-decoration: none;
+    color: var(--black-color);
+  }
+  .header-right {
+    display: flex;
+    align-items : center;
+  }
+  .header-right__item a {
+    line-height: 18px;
+    font-size: 3rem;
+    color: var(--black-color);
+    padding: 0 10px;
+
+  }
+  .bell-icon {
+    color: #f39c12;
+  }
   .main-container {
     display: flex;
     align-items: stretch;
@@ -63,14 +76,27 @@ body {
   }
   .sidebar-section {
     min-height: 600px;
-    background: linear-gradient(to bottom, #b7ef9c, #407c39, #256925);
+    border-right: 1px solid #999;
+    background-color: var(--white-color);
   }
   .menu {
     display: flex;
     flex-direction: column;
   }
-  navbar li {
-  font-size: 1.8rem;
+  .menu-navbar-list {
+    list-style-type: none;
+    padding:0;
+  }
+  .menu-navbar-item {
+    padding: 5px;
+    font-size: 2.4rem;
+  }
+  .menu-navbar-item:hover {
+    background-color: #999;
+  }
+  .menu-navbar-item a {
+    text-decoration: none ;
+    color: var(--black-color);
   }
   .menu-heading {
     font-size: 2.4rem;
@@ -79,8 +105,10 @@ body {
     font-size: 1.8rem;
   }
   .content-section {
+    background-color: #F9FAFB;
     padding-top: 10px ;
     padding-bottom: 10px;
+    
   }
   .parameter {
     justify-content: space-between;
@@ -89,6 +117,7 @@ body {
     padding: 20px;
     margin-bottom: 20px;
     display: flex;
+    background-color: var(--white-color);
   }
   
   
@@ -126,19 +155,19 @@ body {
   .progress-shipping {
     background-color: #ee7567;
     height: 100%;
-    width: 60%; /* Thay đổi giá trị này để thay đổi độ đầy  */
+    width: 60%; 
   }
   .progress-inbox {
     background-color: #67ee6e;
     height: 100%;
-    width: 60%; /* Thay đổi giá trị này để thay đổi độ đầy  */
+    width: 60%;
   }
   
   .progress-bar {
-    height: 20px; /* Độ cao của thanh độ đầy */
-    background-color: #f0f0f0; /* Màu nền của thanh độ đầy */
-    border-radius: 10px; /* Độ cong mép để tạo góc tròn */
-    overflow: hidden; /* Ẩn bớt nội dung vượt ra nếu có */
+    height: 20px; 
+    background-color: #f0f0f0; 
+    border-radius: 10px; 
+    overflow: hidden; 
   }
   .frame {
     border-radius: 10px;
@@ -152,6 +181,7 @@ body {
     border-radius: 10px;
     display: flex;
     justify-content: space-around;
+    background-color: var(--white-color);
   }
   .chart-round .chart h2 {
     font-size: 2rem;
@@ -179,4 +209,158 @@ body {
   .remaining-goods {
     margin-left: auto;
   }
+  /* --------------------------------------------product */
+  .top-div {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+  .insert-prt-btn {
+    text-decoration: none;
+    color: var(--black-color);
+    padding: 10px;
+    background-color: #2ecc71;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.6rem;
+  }
+  .search-prt-btn {
+    padding: 10px;
+    font-size: 1.6rem;
+  }
+  table {
+    width: 100%;
+    background-color: var(--white-color);
+    text-align: center;
+  }
+  th {
+    font-size: 1.8rem;
+  }
+  .col1 {
+    width: 30%;
+  }
+  .col2,.col4,.col5 {
+    width: 10%;
+  }
+  .col3 {
+    width: 40%;
+  }
+  .categoryID,
+  .categoryName,
+  .Name-product,
+  .Price-product {
+    font-size: 1.8rem;
+  }
+  .fa-pencil,.fa-trash  {
+    font-size: 2rem;
+    color: var(--black-color);
+  }
+
+  .fa-pencil:hover,
+  .delete:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+  }
+  .img-product {
+    width: 100%;
+    height: 200px;
+  }
+  /* -------------------------------------- form */
+  .heading {
+    font-size: 4rem;
+  }
+  .form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #888888;
+    margin: 0 auto;
+    background-color: var(--white-color);
+  }
+  .form-login {
+    width: 500px;
+    margin-top: 20px;
+  }
+  label {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 10px;
+  }
   
+  .insert-prt-input,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.6rem;
+  }
+  
+  .submit {
+    font-size: 1.8rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .submit:hover {
+    background-color: #4caf50;
+  }
+  
+  select option {
+    padding: 10px;
+    font-size: 1.6rem;
+  }
+ 
+  .input_insert-cat {
+    padding: 10px;
+  }
+  .Account {
+    position: relative;
+    border: none;
+    background-color: var(--white-color);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  .subnav-account {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    border: 1px solid var(--black-color);
+    background-color: var(--white-color);
+  }
+  .subnav-account-list {
+    padding: 0;
+    list-style: none;
+  }
+ 
+  .subnav-account-item a {
+    display: block ;
+    width: 100%;
+    padding: 4px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: var(--black-color);
+  }
+  .subnav-account-item a:hover {
+    background-color: var(--primary-color);
+  }
+  .update-prt-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.6rem;
+  }

@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
 
 
 <?php
@@ -33,7 +24,8 @@ if (isset($_GET["id"])) {
 
 mysqli_close($conn);
 ?>
-<a href="./e-commerce.php"><button>quay lại</button></a>
+<button onclick="javascript:history.go(-1)" >quay lại</button>
+
 
 
 

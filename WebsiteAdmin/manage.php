@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+include_once './connect.php';
+if($_SESSION["email"] == "admin1234@gmail.com" && $_SESSION["password"] == "1234") {
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,34 +12,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./assets/grid.css">
-  <link rel="stylesheet" href="./assets/e-commerce.css">
   <link rel="stylesheet" href="./assets/manage.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-  <title>Admin</title>
+  
+  <title>TRUNG HIẾU - ADMIN</title>
 </head>
 
 <body>
   <header class="header grid ">
-    <navbar>
-      <ul class="navbar-list">
-        <li class="navbar-item"><a href="">TRUNG HIẾU</a></li>
-        <li class="navbar-item"><p>Xin chào ADMIN</p></li>
-      </ul>
-    </navbar>
+    <div class="header-left">
+      <a href="./manage.php">TRUNG HIẾU</a>
+    </div>
+    <div class="header-right">
+      <div class="header-right__item"><a href=""><i class="bell-icon fa-solid fa-bell"></i></a></div>
+      <div class="header-right__item"><a href=""><i class="fa-solid fa-envelope"></i></a></div>
+      <div class="header-right__item"><a href=""><i class=" fa-solid fa-gear"></i></a></div>
+      <div class="header-right__item">
+        <button onclick="openSubAccount()" class="Account" >Xin chào, 
+          <?php 
+          if(isset($_SESSION['email'])) {
+            echo "$_SESSION[email]";
+          }
+          ?>
+          <i class="fa-solid fa-caret-down"></i>
+          <div class="subnav-account">
+            <ul class="subnav-account-list">
+              <li class="subnav-account-item"><a href="">Thông tin thành viên</a></li>
+              <li class="subnav-account-item"><a href="./logOut.php">Đăng xuất</a></li>
+            </ul>
+          </div>
+        </button>
+      </div>
+    </div>
+     
     
-      
   </header>
   <div class="main-container grid">
     <section class="sidebar-section col l-2">
       <div class="menu">
         <h1 class="menu-heading">BẢNG THỐNG KÊ</h1>
-        <navbar>
-          <ul>
-            <li><a href="./statistical.html">Trang chủ</a></li>
-            <li><a href="./e-commerce.php">Quản lý sản phẩm</a></li>
-            <li><a href="./form.php">Thêm sản phẩm</a></li>
-            <li><a href="./insert_category.php">Thêm danh mục</a></li>
+        <navbar class="menu-navbar">
+          <ul class="menu-navbar-list">
+            <li class="menu-navbar-item"><a href="./manage.php">Trang chủ</a></li>
+            <li class="menu-navbar-item"><a href="./manage.php?page_layout=manageProduct">Quản lý sản phẩm</a></li>
+            <li class="menu-navbar-item"><a href="./manage.php?page_layout=manageCategory">Quản lý danh mục</a></li>
+            <li class="menu-navbar-item"><a href="./manage.php?page_layout=manageComment">Quản lý bình luận</a></li>
           </ul>
         </navbar>
       </div>
@@ -40,74 +66,31 @@
 
     <section class="content-section col l-10">
       <div class="content">
-        <div class="parameter">
-          <div class="inner-div money">
-            <div class="inner-div-title">
-              <i class="material-icons">attach_money</i>
-              <b>Doanh thu</b>
-            </div>
-            <div class="progress-bar">
-              <div class="progress-money">50%</div>
-            </div>
-          </div>
+      <?php
+      if(isset($_GET["page_layout"])){
+        switch ($_GET["page_layout"]) {
+          case 'manageProduct': include_once './manage_product.php';
+            break;
+            case 'manageCategory': include_once './manage_category.php';
+            break;
+            case 'manageProduct': include_once './manage_product.php';
+            break;
+            case 'insertProduct': include_once './form.php';
+            break;
+            case 'insertCategory': include_once './insert_category.php';
+            break;
+            case 'fixProduct' : include_once './update_product.php';
+            break;
+            case 'fixCategory' : include_once './update_category.php';
+            break;
 
-          <div class="inner-div shipping">
-            <div class="inner-div-title">
-              <i class="material-icons">local_shipping</i>
-              <b>Số hàng đã giao</b>
-            </div>
-            <div class="progress-bar">
-              <div class="progress-shipping">60%</div>
-            </div>
-          </div>
-
-          <div class="inner-div inbox">
-            <div class="inner-div-title">
-              <i class="material-icons">inbox</i>
-              <b>Hàng còn trong kho</b>
-            </div>
-            <div class="progress-bar">
-              <div class="progress-inbox">60%</div>
-            </div>
-          </div>
-        </div>
-        <!-- chart thống kê -->
-        <div class="frame">
-          <div claas="column-diagram">
-            <div id="chart"></div>
-            <div id="Chart2"></div>
-            <script src="./column.js"></script>
-          </div>
-        </div>
-        <!-- <h2>Biểu đồ thống kê sản phẩm</h2> -->
-        <div class="chart-round">
-          <div class="chart">
-            <h2>Sản phẩm còn trong kho</h2>
-            <canvas id="productChart"></canvas>
-          </div>
-
-          <div class="board-infor">
-            <div class="board">
-              <h2>Sản phẩm</h2>
-              <div class="column">
-                <p class="title-product">Chăn:</p>
-                <p class="remaining-goods">Còn 200 chiếc</p>
-              </div>
-              <div class="column">
-                <p class="title-product">Ga giường:</p>
-                <p class="remaining-goods">Còn 200 chiếc</p>
-              </div>
-              <div class="column">
-                <p class="title-product">Gối:</p>
-                <p class="remaining-goods">Còn 200 chiếc</p>
-              </div>
-              <div class="column">
-                <p class="title-product">Nệm:</p>
-                <p class="remaining-goods">Còn 200 chiếc</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        }
+      }
+      else {
+        include_once './intro.php';
+      }
+      ?>
+       
       </div>
     </section>
 
@@ -115,6 +98,13 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="round.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>
+<?php
+}
+else {
+  header('location: index.php');
+}
+?>
